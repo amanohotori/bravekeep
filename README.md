@@ -1,3 +1,3 @@
 # bravekeep
-Braveのブロックチェーン自動入力に、任意の主キーとValueを入れて強引にブロックチェーンメモを記憶させるHTML。
+Braveのブロックチェーン自動入力に、usernameとして任意の主キーとpasswordとしてValueを入れて、強引にブロックチェーンメモをBraveブラウザに記憶させるHTML。
 
