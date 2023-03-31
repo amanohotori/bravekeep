@@ -18,7 +18,7 @@
 			font-weight: bold;
 		}
 
-		input[type=text], input[type=password] {
+		input[type=text], textarea {
 			width: 100%;
 			margin-bottom: 10px;
 			padding: 5px;
@@ -45,24 +45,13 @@
 </head>
 <body>
 	<h1>Brave Keep</h1>
-	<form>
+	<form action="">
 		<label for="username">主キー（ユーザー名として）:</label>
 		<input type="text" id="username" name="username" autocomplete="username" required>
 		
 		<label for="password">Value（パスワードとして）:</label>
-		<input type="password" id="password" name="password" autocomplete="current-password" onChange="passwordType()" required>
-		<input type="submit" value="Keep" onClick="passwordType()">
+		<textarea id="password" name="password" autocomplete="current-password" rows="10" required></textarea>
+		<input type="submit" value="Keep">
 	</form>
-
-	<script>
-		function passwordType() {
-			var password = document.getElementById("password");
-			if (password.value.length > 0) {
-				password.type = "text";
-			} else {
-				password.type = "password";
-			}
-		}
-	</script>
 </body>
 </html>
