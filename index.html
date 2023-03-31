@@ -54,9 +54,10 @@
 	</form>
 	<script>
 		function passwordType() {
-			var password = document.getElementById("password").value;
-			var passwordInput = document.getElementById("passwordInput");
-			passwordInput.value = password;
+		var password = document.getElementById("password");
+		var passwordInput = document.getElementById("passwordInput");
+		passwordInput.value = password.value;
+		password.value = "";
 		}
 	</script>
 	<input type="password" id="passwordInput" name="password" autocomplete="on" required style="position: absolute; left: -9999px;">
