@@ -48,19 +48,15 @@
 	<form action="" autocomplete="on">
 		<label for="username">主キー（ユーザー名として）:</label>
 		<input type="text" id="username" name="username" autocomplete="username" required>
-		
 		<label for="password">Value（パスワードとして）:</label>
-		<input type="password" id="password" name="password" autocomplete="on" onChange="passwordType()" required>
+		<textarea id="password" name="password" autocomplete="new-password" rows="10" required></textarea>
+<input type="password" id="password" name="password" autocomplete="on" onChange="passwordType()" required>
 		<input type="submit" value="Keep" onClick="passwordType()">
 	</form>
 	<script>
 		function passwordType() {
 			var password = document.getElementById("password");
-			if (password.value.length > 0) {
-				password.type = "text";
-			} else {
-				password.type = "password";
-			}
+			password.type = "password";
 		}
 	</script>
 </body>
