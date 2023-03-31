@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Brave Keep</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 50px;
-    }
+	<meta charset="UTF-8">
+	<title>Brave Keep</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
 
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
 
-    input[type=text], textarea {
-      width: 100%;
-      margin-bottom: 10px;
-      padding: 5px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-    }
+		input[type=text], textarea {
+			width: 100%;
+			margin-bottom: 10px;
+			padding: 5px;
+			font-size: 16px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
 
-    input[type=submit] {
-      margin-top: 10px;
-      background-color: #008CBA;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-  </style>
+		input[type=submit] {
+			margin-top: 10px;
+			background-color: #008CBA;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	</style>
 </head>
 <body>
-  <h1>Brave Keep</h1>
-  <form action="" autocomplete="on">
-    <label for="username">主キー（ユーザー名として）:</label>
-    <input type="text" id="username" name="username" autocomplete="username" required>
-    <label for="password">Value（パスワードとして）:</label>
-    <textarea id="password" name="password" autocomplete="new-password" rows="10" required></textarea>
-    <input type="password" id="passwordInput" name="password" autocomplete="on" required>
-    <input type="submit" value="Keep" onClick="passwordType()">
-  </form>
-  <script>
-    function passwordType() {
-      var passwordTextarea = document.getElementById("password");
-      var passwordInput = document.getElementById("passwordInput");
-      passwordInput.value = passwordTextarea.value;
-    }
-  </script>
+	<h1>Brave Keep</h1>
+	<form action="" autocomplete="on">
+		<label for="username">主キー（ユーザー名として）:</label>
+		<input type="text" id="username" name="username" autocomplete="username" required>
+		<label for="password">Value（パスワードとして）:</label>
+		<textarea id="password" name="password" autocomplete="new-password" rows="10" required></textarea>
+		<input type="submit" value="Keep" onClick="passwordType()">
+	</form>
+	<script>
+		function passwordType() {
+			var password = document.getElementById("password").value;
+			var passwordInput = document.getElementById("passwordInput");
+			passwordInput.value = password;
+		}
+	</script>
+	<input type="password" id="passwordInput" name="password" autocomplete="on" required style="position: absolute; left: -9999px;">
 </body>
 </html>
